@@ -19,13 +19,13 @@
  * contains the table to be worked on.
  * So we create an empty DIV with a class of anything, and pass that class to
  * 'showHideColumns', if you give your DIV containing your TABLE a class of 
- * 'search-result' that is it your good to go, if you want though you can pass
+ * 'show-hide-column' that is it your good to go, if you want though you can pass
  * in the class of your choice as an option.
  * 
  * Example 1
  * 
  * <div class="column-selector"></div>
- * <div class="search-result"></div>
+ * <div class="show-hide-column"></div>
  * 
  * $('.column-selector').showHideColumns();
  * 
@@ -37,8 +37,8 @@
  * $('.column-selector').showHideColumns({tableDiv:'.my-table', bold:true});
  * 
  * Options
- * tableDiv: ".your-class"      //Any Class surrounding your table
- * bold:true                    //Boolean value TRUE / FALSE
- * width:'100%'                 //Percentage 0 - 100
- * fontSize:'13px'              //Any font format, px / em/ %
+ * tableDiv: ".show-hide-column"	//Any Class surrounding your table
+ * bold:true                    	//Boolean value TRUE / FALSE
+ * width:'100%'                 	//Percentage 0 - 100
+ * fontSize:'13px'              	//Any font format, px / em/ %
  */

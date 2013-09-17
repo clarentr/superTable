@@ -15,7 +15,7 @@
         // This is the easiest way to have default options.
         var settings = $.extend({
             // These are the defaults.
-            tableDiv: ".search-result",
+            tableDiv: ".show-hide-column",
             bold:false,
             width:'100%',
             fontSize:'13px'
