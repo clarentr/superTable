@@ -1,5 +1,5 @@
 /* 
- * version 1.0
+ * version 1.5
  * 
  * showHideColumns jQuery plugin
  * 
@@ -15,17 +15,19 @@
         // This is the easiest way to have default options.
         var settings = $.extend({
             // These are the defaults.
-            tableDiv: ".show-hide-column",
+            selectorClass: "column-selector",
             bold:false,
             width:'100%',
             fontSize:'13px'
         }, options );
         
         var choiceDiv = this;
+        $this = choiceDiv.selector;
+        divName = settings.selectorClass;
         
-        var string = "<table style='width:"+settings.width+";'><tr><td><strong>Show Hide Column  -</strong></td>"
+        var string = "<div class='"+divName+"'><table style='width:"+settings.width+";'><tr><td><strong>Show Hide Column  -</strong></td>"
         
-        $(settings.tableDiv+' th').each(function( index, listItem ) {
+        $($this+' th').each(function( index, listItem ) {
             
             if(settings.bold){
                 title = '<strong>'+listItem.outerText+'</strong>';
@@ -37,20 +39,22 @@
             string += "<td style='font-size:"+settings.fontSize+"'><label><input type='checkbox' name='tableName' value='"+value+"' class='tableName' checked='checked'>"+title+"</label></td>";
         });
     
-        string += "</tr></table>";
+        string += "</tr></table></div>";
         
-        $(choiceDiv.selector).html(string);
+        $(string).insertBefore($this);
+        
+        temp = divName.split(' ');
+        firstClass = temp[0];
  
-        // Greenify the collection based on the settings variable.
-        return this.find('input').change(function(){
+        return this.prev("."+firstClass).find('input').change(function(){
             
             val = parseInt($(this).val());
             checked = $(this).is(':checked');
             
             if(checked){
-                $(settings.tableDiv+' td:nth-child('+val+'), '+settings.tableDiv+' th:nth-child('+val+')').fadeIn('slow');
+                $($this+' td:nth-child('+val+'), '+$this+' th:nth-child('+val+')').fadeIn('slow');
             }else{
-                $(settings.tableDiv+' td:nth-child('+val+'), '+settings.tableDiv+' th:nth-child('+val+')').fadeOut('slow');
+                $($this+' td:nth-child('+val+'), '+$this+' th:nth-child('+val+')').fadeOut('slow');
             }
         });
         
