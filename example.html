@@ -12,14 +12,23 @@
 
 
 <style>
-	.table-test{width:100%; border:1px #999999 solid;}
-	.table-test th{border:1px solid #CCC; background:#666; color:#FFF;}
-	.table-test td{border:1px solid #CCC;}
+	table{width:100%; border:1px #999999 solid;}
+	table th{border:1px solid #CCC; background:#666; color:#FFF;}
+	table td{border:1px solid #CCC;}
 </style>
 
 <script>
 $(document).ready(function(e) {
-    $('.table-test').showHideColumns({csvButtonClass:"btn btn-success"});
+    $('.table-test').showHideColumns({
+		csvButtonClass:"btn btn-success",
+		delivery:'popup',
+		showCSVButton:true
+	});
+	
+	$('.my-table').showHideColumns({
+		csvButtonClass:"btn btn-danger",
+		delivery:'popup'
+	});
 });
 </script>
 
@@ -52,6 +61,35 @@ $(document).ready(function(e) {
         <td>body 2c</td>
         <td>body 3c</td>
         <td>body 4c</td>
+    </tr>
+</table>
+
+<h1>Table Test 2</h1>
+
+<table class="my-table">
+	<tr>
+    	<th>Head77 1</th>
+        <th>Head77 2</th>
+        <th>Head77 3</th>
+        <th>Head77 4</th>
+    </tr>
+    <tr>
+    	<td>body77 1a</td>
+        <td>body77 2a</td>
+        <td>body77 3a</td>
+        <td>body77 4a</td>
+    </tr>
+    <tr>
+    	<td>body77 1b</td>
+        <td>body77 2b</td>
+        <td>body77 3b</td>
+        <td>body77 4b</td>
+    </tr>
+    <tr>
+    	<td>body77 1c</td>
+        <td>body77 2c</td>
+        <td>body77 3c</td>
+        <td>body77 4c</td>
     </tr>
 </table>
 </body>

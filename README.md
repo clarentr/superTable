@@ -1,11 +1,17 @@
-version 1.5
+version 2
 
 showHideColumns jQuery plugin
-Requires: jQuery 1.7+
+Requires: jQuery 1.6+
 
 Author: Clarent Rowe
 
 Email: maestro6435@gmail.com
+
+Added
+v2 - 	Now includes TableCSVExport script curtesy of ZachWick (https://github.com/ZachWick),
+		User can add csv button to get a spread sheet version of table, which can be downloaded
+		or popped up.
+
 
 How it works
 A pre defined DIV including a TABLE is searched for all TH elements
@@ -34,3 +40,4 @@ selectorClass: ".your-class" //Add as many classes as you like
 bold:true                    //Boolean value TRUE / FALSE
 width:'100%'                 //Percentage 0 - 100
 fontSize:'13px'              //Any font format, px / em/ %
+delivery:'download'			 //How user gets CSV, download / popup / 
