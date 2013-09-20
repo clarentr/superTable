@@ -1,7 +1,7 @@
 /* 
  * version 2.2
  * 
- * showHideColumns jQuery plugin
+ * superTable jQuery plugin
  * 
  * Author: Clarent Rowe
  * 
@@ -10,7 +10,7 @@
 
 (function ( $ ) {
     
-    $.fn.showHideColumns = function(options) {
+    $.fn.superTable = function(options) {
         
         // This is the easiest way to have default options.
         var settings = $.extend({
