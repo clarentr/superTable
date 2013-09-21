@@ -22,7 +22,10 @@
             fontSize:'13px',
 			delivery:'download',
 			showCSVButton:true,
-			showShowHide:true
+			showShowHide:true,
+			tableRowColor:false,
+			evenRow:'none',
+			oddRow:'none'
         }, options );
         
         var choiceDiv = this;
@@ -32,6 +35,14 @@
 		var buttonClass = settings.csvButtonClass;
 		var showButton = settings.showCSVButton;
 		var showSH = settings.showShowHide;
+		var colorRow = settings.tableRowColor;
+		var evenR = settings.evenRow;
+		var oddR = settings.oddRow;
+		
+		if(colorRow){
+			$('.'+tableName+' tr:nth-child(even)').css({'background':evenR});
+			$('.'+tableName+' tr:nth-child(odd)').css({'background':oddR});
+		}
         
         var string = "<div class='"+divName+"'>";
 		
