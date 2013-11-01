@@ -29,8 +29,8 @@
         }, options );
         
         var choiceDiv = this;
-		var tableName = this[0].className;
         var $this = choiceDiv.selector;
+        var tableName = $this.replace(".", "");
         var divName = settings.selectorClass;
 		var buttonClass = settings.csvButtonClass;
 		var showButton = settings.showCSVButton;
