@@ -95,7 +95,10 @@
         }
         
         if(sortMyTable){
-            $("."+tableName).tablesorter();
+            test = $("."+tableName).tablesorter();
+            if(test){
+                $("."+tableName+" th").css("cursor","pointer");
+            }
         }
         
         if(showSH){

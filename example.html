@@ -20,10 +20,16 @@
 <script>
 $(document).ready(function(e) {
     $('.table-test').superTable({
-		csvButtonClass:"btn btn-success",
-		delivery:'popup',
-		showCSVButton:true,
-		tableRowColor:true,
+		selectorClass: "column-selector",
+                csvButtonClass:"btn",
+                bold:false,
+                width:'100%',
+                fontSize:'13px',
+                delivery:'download',
+                showCSVButton:true,
+                showShowHide:true,
+                sortTable:true,
+                tableRowColor:true,
 		evenRow:'#ccc',
 		oddRow:'#ddd'
 	});
@@ -31,8 +37,11 @@ $(document).ready(function(e) {
 	$('.my-table').superTable({
 		csvButtonClass:"btn btn-danger",
 		delivery:'popup',
-		showShowHide:false
+		showShowHide:false,
+                sortTable:false,
 	});
+        
+        $(".sort-table").superTable();
 });
 </script>
 
@@ -71,6 +80,34 @@ $(document).ready(function(e) {
 <h1>Table Test 2</h1>
 
 <table class="my-table">
+	<tr>
+    	<th>Head77 1</th>
+        <th>Head77 2</th>
+        <th>Head77 3</th>
+        <th>Head77 4</th>
+    </tr>
+    <tr>
+    	<td>body77 1a</td>
+        <td>body77 2a</td>
+        <td>body77 3a</td>
+        <td>body77 4a</td>
+    </tr>
+    <tr>
+    	<td>body77 1b</td>
+        <td>body77 2b</td>
+        <td>body77 3b</td>
+        <td>body77 4b</td>
+    </tr>
+    <tr>
+    	<td>body77 1c</td>
+        <td>body77 2c</td>
+        <td>body77 3c</td>
+        <td>body77 4c</td>
+    </tr>
+</table>
+<h1>Table Test 3</h1>
+
+<table class="sort-table">
 	<tr>
     	<th>Head77 1</th>
         <th>Head77 2</th>
