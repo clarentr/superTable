@@ -1,4 +1,4 @@
-version 2.2
+version 3.0
 
 superTable jQuery plugin
 Requires: jQuery 1.6+
