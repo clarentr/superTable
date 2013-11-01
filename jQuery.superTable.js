@@ -36,7 +36,7 @@
         var buttonClass = settings.csvButtonClass;
         var showButton = settings.showCSVButton;
         var showSH = settings.showShowHide;
-        var sortTable = settings.sortTable;
+        var sortMyTable = settings.sortTable;
         var colorRow = settings.tableRowColor;
         var evenR = settings.evenRow;
         var oddR = settings.oddRow;
@@ -94,6 +94,10 @@
            });
         }
         
+        if(sortMyTable){
+            $("."+tableName).tablesorter();
+        }
+        
         if(showSH){
                 temp = divName.split(' ');
                 firstClass = temp[0];
@@ -109,10 +113,6 @@
                                 $($this+' td:nth-child('+val+'), '+$this+' th:nth-child('+val+')').fadeOut('slow');
                         }
                 });
-        }
-        
-        if(sortTable){
-            $("."+tableName).tableSorter;
         }
     
     };
