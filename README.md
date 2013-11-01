@@ -8,6 +8,7 @@ Author: Clarent Rowe
 Email: maestro6435@gmail.com
 
 Added
+v3.0    Now will allow user to sort table by clicking column header
 v2.2	Now you can color table rows
 v2.0  	Now includes TableCSVExport script curtesy of ZachWick 		
 		(https://github.com/ZachWick),
