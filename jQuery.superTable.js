@@ -24,6 +24,7 @@
             showCSVButton:true,
             showShowHide:true,
             sortTable:true,
+            tableHeadColor:"none",
             tableRowColor:false,
             evenRow:'none',
             oddRow:'none'
@@ -40,10 +41,18 @@
         var colorRow = settings.tableRowColor;
         var evenR = settings.evenRow;
         var oddR = settings.oddRow;
+        var tableHeadColor = settings.tableHeadColor;
 
         if(colorRow){
+            if(evenR === "none"){
+                evenR = "#fcfcfc";
+            }
                 $('.'+tableName+' tr:nth-child(even)').css({'background':evenR});
                 $('.'+tableName+' tr:nth-child(odd)').css({'background':oddR});
+        }
+        
+        if(tableHeadColor !== "none"){
+            $('.'+tableName+' thead').css({'background':tableHeadColor});
         }
         
         var string = "<div class='"+divName+"'>";
